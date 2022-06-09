@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+:root{
+  --text: 1.5rem;      /* creating variable text */
+  --head: calc(1rem + 5vw ); /* means 5% of view page with 1rem */
+  --head1: calc(0.6rem + 5vw );
+
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+ .hero-section{
+   min-height: 100vh;
+   background: url('https://images8.alphacoders.com/102/thumb-1920-1021231.jpg');
+   background-repeat:no-repeat;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   z-index=2;
+   opacity: 2;
+   animation: slide 1s ease-in-out;
+ }
+
+ h2{
+   font-size: 30px;
+   font-weight:bold;
+ }
+ .navbar {
+
+   display: flex; /*brandname and navabr comes side by side */
+   justify-content: space-between;
+   align-items: center;
+   height: 10vh;
+   padding: 0rem 1rem;
+   color: white;
+   transform:translateY(-100%);
+   animation: movedown 850ms ease-in 1s forwards;
+ }
+  @keyframes movedown{
+    from {
+      transform:translateY(-100%);
+    }
+    to {
+     transform:translateY(0%);
+    }
+
+  }
+ .navbar ul {
+   list-style: none;
+ }
+ .navbar ul li {
+   display :inline-block;
+   line-height: 80px;
+   margin:0 5px;
+   font-size: var(--text);
+
+ }
+
+ nav ul li a {
+  color: #ffff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 2px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: background;
+
+ }
+  nav ul li a:not(:last-child){
+  margin-right: 30px;
+}
+
+ nav ul li a:hover {
+    background: lightblue;
+ }
+
+ .hero-text {
+   color: white;
+   height:90vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+ }
+
+ @keyframes slide {
+   from {
+     transform:translateX(-100%);
+   }
+   to {
+    transform:translateX(0%);
+   }
+ }
+ .hero-text p{
+   font-size: 3rem;
+   color:#ffff;
+   font-style: italic;
+ }
+ .hero-text h3{
+   font-size:  var(--head);
+   color: lightblue;
+
+   font-stretch: expanded;
+   font-style: oblique;
+   animation: slide 1s ease-in 1s backwards ;
+
+ }
+ .hero-text a{
+   color: white;
+   background-color: #fbc531;
+   font-weight: 900;
+   font-size: var(--text);
+   padding: 0.8rem 1rem;
+   margin: 0.8rem auto;
+   display: block;
+   transition: opacity 250ms linear;
+ }
+
+ .hero-text a:hover{
+   opacity:0.8;
+ }
+
+ .media-icons{
+  display: flex;
+  font-size: 50px;
+  margin: auto;
+  width:auto;
+
+}
+
+.fa-facebook {
+  /*background: #3B5998;*/
+  color: white;
+}
+
+.fa-twitter {
+  /*background: #55ACEE;*/
+  color: white;
+}
+.fa-instagram {
+  /*background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);*/
+  color: white;
+
+}
+.media-icons a{
+  position: relative;
+  font-size: 30px;
+  transition: 0.3s;
+  transition-property: transform;
+}
+
+.media-icons a:not(:last-child){
+  margin-right: 60px;
+}
+
+.media-icons a:hover{
+  transform: scale(1.5);
+}
